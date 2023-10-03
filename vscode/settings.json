@@ -1,0 +1,160 @@
+{
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "relative",
+    "editor.fontSize": 13,
+    "workbench.enableExperiments": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontWeight": 350,
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "[javascriptreact]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "editor.minimap.enabled": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.tabs.enabled": true,
+    "editor.cursorStyle": "line",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "editor.inlineSuggest.enabled": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": true,
+        "javascript": true,
+        "python": false
+    },
+    "oneDarkPro.vivid": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "material-ui-snippets.showNotesOnStartup": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "svelte.enable-ts-plugin": true,
+    "json.schemas": [],
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.formatOnSave": true,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontFamily": "cascadia code,jetbrains mono nl, fira code retina, Monaco, Menlo, 'Courier New', monospace",
+    "terminal.integrated.gpuAcceleration": "off",
+    "svelte.plugin.svelte.note-new-transformation": false,
+    "eslint.validate": ["javascript", "javascriptreact", "svelte"],
+    "cssvar.files": [
+        "./node_modules/open-props/open-props.min.css"
+        // if you have an alternative path to where your styles are located
+        // you can add it in this array of files
+        // "public/global.css"
+    ],
+    // Do not ignore node_modules css files, which is ignored by default
+    "cssvar.ignore": [],
+    // add support for autocomplete in JS or JS like files
+    "cssvar.extensions": ["css", "postcss", "jsx", "tsx", "svelte"],
+    "[svelte]": {
+        "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "screencastMode.fontSize": 36,
+    "workbench.startupEditor": "none",
+    "Codegeex.Privacy": false,
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "editor.linkedEditing": true,
+    "workbench.editor.enablePreview": false,
+    "telemetry.telemetryLevel": "off",
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "vim.smartRelativeLine": true,
+    "pylint.severity": {
+        "convention": "Hint"
+    },
+    "python.analysis.autoImportCompletions": true,
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // NAVIGATION
+        // switch b/w buffers
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+        {
+            "before": ["[", "d"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["]", "d"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["<leader>", "c", "a"],
+            "commands": ["editor.action.quickFix"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        // Move selected lines while staying in visual mode
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            //exit insert mode
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.autoClosingBrackets": "never",
+    "workbench.fontAliasing": "auto",
+    "prettier.tabWidth": 4,
+    "workbench.sideBar.location": "right",
+    "window.commandCenter": false,
+    "workbench.editor.showTabs": true,
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1
+}

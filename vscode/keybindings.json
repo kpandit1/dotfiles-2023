@@ -1,0 +1,65 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+cmd+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "alt+cmd+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "cmd+e"
+    },
+    {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "cmd+e",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "w",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "command": "deleteFile",
+        "key": "d",
+        "when": "filesExplorerFocus && !inputFocus"
+    }
+]
