@@ -71,6 +71,8 @@ require('lazy').setup({
 
   'github/copilot.vim',
 
+  'ThePrimeagen/harpoon',
+
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -148,11 +150,21 @@ require('lazy').setup({
     },
   },
 
+  -- {
+  --
+  --   'maxmx03/solarized.nvim',
+  --   priority = 1500,
+  --   config = function()
+  --     vim.o.background = 'light'
+  --     vim.cmd.colorscheme 'solarized'
+  --   end,
+  -- },
   {
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
+      vim.o.background = 'dark'
       vim.cmd.colorscheme 'onedark'
     end,
   },
@@ -196,12 +208,12 @@ require('lazy').setup({
       -- requirements installed.
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation,
+        -- NOTE: If you are having trouble with this installation,,
         --       refer to the README for telescope-fzf-native for more instructions.
         build = 'make',
         cond = function()
           return vim.fn.executable 'make' == 1
-        end,
+        end
       },
     },
   },
@@ -289,6 +301,17 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+vim.keymap.set("n", "<leader>f", mark.add_file)
+vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
+
+vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
