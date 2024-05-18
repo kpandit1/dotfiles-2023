@@ -164,7 +164,7 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.o.background = 'dark'
+      -- vim.o.background = 't'
       vim.cmd.colorscheme 'onedark'
     end,
   },
@@ -240,6 +240,16 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
+  {
+    'stevearc/oil.nvim',
+    opts = {
+      view_options = {
+        show_hidden = true,
+      }
+    },
+    -- Optional dependencies
+    -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 }, {})
 
 -- [[ Setting options ]]
@@ -312,6 +322,7 @@ vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
