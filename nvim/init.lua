@@ -163,12 +163,15 @@ require('lazy').setup({
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
-    config = function()
-      -- vim.o.background = 't'
+    opts = {
+      -- transparent = true,
+    },
+    config = function(_, opts)
+      require('onedark').setup(opts)
       vim.cmd.colorscheme 'onedark'
     end,
-  },
 
+  },
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -609,3 +612,9 @@ cmp.setup {
 --
 local options = { noremap = true }
 vim.keymap.set("i", "jk", "<Esc>", options)
+
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
